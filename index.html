@@ -1,14 +1,130 @@
 <!DOCTYPE html>
 
 <head>
-    <title>Calculator-BMI</title>
+    <title>BMI Calculator</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="image/x-icon" href="assets/bmi.png">
 </head>
 
 <body>
-    <script src="js/script.js">
+    <header>
+        <h1>BMI Calculator</h1>
+    </header>
+    <main>
+        <div class="main-container">
+            <div class="item-container">
+                <h2>BMI Calculator</h2>
+                <p>The ideal weight is dream for everyone, not only for having a body shape that supports appearance,
+                    but also because
+                    ideal weight indicates a healthy body condition. What about you? Let's calculate now using the BMI
+                    calculator.
+                </p>
+                <!-- Form Input Data User -->
+                <div class="form">
+                    <form>
+                        <div class="genderform">
+                            <h3>Gender</h3>
+                            <input type="radio" id="male" name="gender" value="Male">
+                            <label for="male"><b>Male</b></label>
+                            <input type="radio" id="female" name="gender" value="Female">
+                            <label for="female"><b>Female</b></label>
+                        </div>
+                        <div>
+                            <label><b>Body Weight (kg)</b></label>
+                            <div class="row">
+                                <div class="tb-img">
+                                    <img class="icon" src="assets/pen.png">
+                                </div>
+                                <div class="tb-container">
+                                    <input type="number" id="tb_weight" name="tb_weight" required>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <label><b>Age (Years)</b></label>
+                            <div class="row">
+                                <div class="tb-img">
+                                    <img class="icon" src="assets/pen.png">
+                                </div>
+                                <div class="tb-container">
+                                    <input type="number" id="tb_age" name="tb_age" required>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <label><b>Body Height (cm)</b></label>
+                            <div class="row" id="height">
+                                <div class="tb-img">
+                                    <img class="icon" src="assets/pen.png">
+                                </div>
+                                <div class="tb-container">
+                                    <input type="number" id="tb_height" name="tb_height" required>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row-btn">
+                            <button name="submit" type="button" class="btn-submit"
+                                onclick="calculate()">Calculate</button>
+                            <button name="reset" type="reset" class="btn-reset">Reset</button>
+                        </div>
+                    </form>
+                </div>
 
-    </script>
+                <p>Feature Advantages: </p>
+                <p>
+                    1. Weight Calculation </br>
+                    2. Determining Ideal or Non-Ideal Body Weight Categories </br>
+                    3. Preparing Weight Loss Programs </br></p>
+                <p>This calculator is intended for use by adults only (pregnant or breastfeeding women are not advised
+                    to rely on BMI
+                    readings). No specific actions should be taken based on the BMI value, except consulting with
+                    qualified individuals such
+                    as a doctor.
+                </p>
+                <p>
+                    The calculator will provide you with an overview of the comparison of your body weight to general
+                    values. Body Mass
+                    Index (BMI) is calculated as your weight (in kilograms) divided by the square of your height (in
+                    meters) or BMI = Kg/M<sup>2</sup>.</p>
+            </div>
+            <!-- Hasil Perhitungan BMI -->
+            <div class="item-container">
+                <h2>Result</h2>
+                <div class="result-container">
+                    <p id="weightstat"></p>
+                    <p id="bmivalue">BMI Result</p>
+                    <p id="bmiinformation"></p>
+                    <button class="btn" onclick=notuse()>Downloadl BMI Result</button>
+                </div>
+                <p id="bmisummary1"></p>
+                <p id="bmisummary2"></p>
+                <div class="row-btn">
+                    <button class="btn" onclick=notuse()>Consultation With Nutrition Expert via Application</button>
+                    <button class="btn" onclick=notuse()>Online Registration For Nutritionists</button>
+                </div>
+                <p>BMI does not fully represent a comprehensive diagnosis of an individual's overall health and the risk
+                    of diseases. You
+                    need further consultation regarding the risks and concerns related to your body weight.
+                </p>
+                <div class="result-container">
+                    <p>Some diseases caused by obesity</p>
+                    <p>Diabetes</p>
+                    <p>Hypertension</p>
+                    <p>Heart Attack</p>
+                    <p>Osteoarthritis</p>
+                    <div class="row-btn-result">
+                        <button class="btn" onclick=notuse()>Consultation With Nutrition Expert via Application</button>
+                        <button class="btn" onclick=notuse()>Online Registration Now</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <!-- web author -->
+        <p>by : Bagus Satrio Utomo</p>
+    </footer>
+    <script src="js/script.js"></script>
 
 </body>
 
