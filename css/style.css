@@ -13,6 +13,7 @@ header > h1 {
 		flex-direction: column;
 	}
 }
+
 .item-container {
 	width: 100%;
 	padding: 10px;
